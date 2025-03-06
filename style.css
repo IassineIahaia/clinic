@@ -1015,9 +1015,15 @@ footer .wrapper h2, footer .wrapper h3, footer .wrapper h4 {
   padding: 30px 0;
 }
 .footer-copyright p {
-  grid-column-start: 5;
+  text-align: center;
   grid-column-end: span 4;
   margin: 0;
+}
+@media (min-width: 48rem) {
+  .footer-copyright p {
+    grid-column-start: 5;
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
