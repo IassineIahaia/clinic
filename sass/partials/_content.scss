@@ -116,9 +116,6 @@
         @include grid-column-start(8);
         @include grid-column-span(4);
     }
-    @include breakpoint-desktop-small {
-        // width: 554px;
-    }
     &:before{
         position: absolute;
         content: '';
@@ -207,8 +204,6 @@
         }
     }
 }
-
-
 .overview-items{
     @include grid-layout(4, 16px, 235px);
     @include breakpoint-tablet{
@@ -241,6 +236,18 @@
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         overflow: hidden;
+        &:before{
+            position: absolute;
+            content: '';
+            max-width: 317.65px;
+            width: 230px;
+            aspect-ratio: 1 / 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url('../images/shape-circle.svg') no-repeat center;
+            z-index: 1;
+        }
      }
 }
 

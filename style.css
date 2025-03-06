@@ -714,6 +714,18 @@ header.fixed {
   border-radius: 50%;
   overflow: hidden;
 }
+.overview-item .overview-item-image:before {
+  position: absolute;
+  content: "";
+  max-width: 317.65px;
+  width: 230px;
+  aspect-ratio: 1/1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../images/shape-circle.svg") no-repeat center;
+  z-index: 1;
+}
 
 .gradient-bg {
   background: linear-gradient(135deg, #B2DC86, #72CDEC);
