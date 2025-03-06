@@ -220,3 +220,31 @@
         overflow: hidden;
      }
 }
+
+.video-body{
+    overflow: hidden;
+    border-radius: 20px;
+    aspect-ratio: 16 / 9;
+    @include grid-column-span(4);
+    @include breakpoint-tablet{
+        @include grid-column-span(12);
+    }
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.play-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 111px;
+    width: 10vw;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+    
+}
