@@ -187,8 +187,8 @@
 }
 
 .overview{
+    margin-top: 30px;
     min-height: 800px;
-    background: linear-gradient(135deg, $color-green, $color-blue);
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
     @include breakpoint-desktop-small{
@@ -207,6 +207,8 @@
         }
     }
 }
+
+
 .overview-items{
     @include grid-layout(4, 16px, 235px);
     @include breakpoint-tablet{
@@ -215,13 +217,21 @@
 }
 
 .overview-item{
-    background-color: $color-white;
+    background: linear-gradient(135deg, $color-green, $color-blue);
     padding-bottom:60px;
     text-align: center;
     border-radius: 50px;
     @include grid-column-span(4);
     @include breakpoint-tablet{
         @include grid-column-span(6);
+    }
+    .overview-item-text{
+        .btn{
+            background-color: $color-white;
+            &:hover{
+                background-color: $color-blue; 
+             }
+        }
     }
     .overview-item-image{
         margin-top: -150px;
@@ -232,6 +242,19 @@
         border-radius: 50%;
         overflow: hidden;
      }
+}
+
+.gradient-bg{
+    background: linear-gradient(135deg, $color-green, $color-blue);
+    .overview-item{
+        background: $color-white;
+        .btn{
+            background-color: $color-green;
+            &:hover{
+               background-color: $color-blue; 
+            }
+        }
+    }
 }
 
 .video-body{
@@ -259,5 +282,19 @@
     width: 10vw;
     aspect-ratio: 1 / 1;
     cursor: pointer;
-    
+}
+.contact{
+    margin-top: 130px;
+}
+
+.sidebar{
+    @include grid-column-start(1);
+    @include grid-column-span(2);
+    @include breakpoint-tablet{
+        @include grid-column-start(9);
+        @include grid-column-span(2);
+    }
+    p{
+        margin: 0;
+    }
 }
