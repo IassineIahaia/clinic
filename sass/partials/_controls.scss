@@ -1,0 +1,32 @@
+%control-properties {
+    position: relative;
+    font-family: $font-family-title;
+    font-size: rem(18px);
+    font-weight: 700;
+    display: inline-block;
+    color: $color-black;
+    background-color: $color-green;
+    cursor: pointer;
+    padding: rem(13px) rem(38px) rem(15px) rem(36px);
+    text-decoration: none;
+    border-radius: 25px;
+    line-height: 1;
+    overflow: hidden;
+}
+
+%focus-properties {
+    color: $color-black;
+    background-color: $color-blue;
+}
+
+.btn-center{
+    text-align: center;
+}
+
+.btn {
+    transition: all 0.2s ease-in-out;
+    @extend %control-properties;
+    &:hover{
+        @extend %focus-properties;
+    }
+}

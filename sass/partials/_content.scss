@@ -1,0 +1,222 @@
+.hero{
+    min-height: 716px;
+    background: linear-gradient(112deg, $color-green, $color-blue);
+    display: grid;
+    align-items: end;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    @include breakpoint-desktop-small{
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+}
+.hero-text{
+    align-self: end;
+    @include grid-column-span(4); 
+    @include breakpoint-tablet{
+        @include grid-column-start(1);
+        @include grid-column-span(5);
+    }
+    @include breakpoint-desktop-small {
+        margin-bottom: 90px;
+    }
+    h1{
+        font-size: 38px;
+    }
+ 
+    p{
+        max-width: 396px;
+    }
+    .btn{
+        color: $color-black;
+        background-color: $color-white;
+        &:hover{
+            color: $color-white;
+            background-color: $color-black;
+        }
+    }
+}
+.hero-image{
+    position: relative;
+    margin-bottom: -80px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    @include grid-column-start(1);
+    @include grid-column-span(4); 
+    @include breakpoint-tablet{
+        @include grid-column-start(7);
+        @include grid-column-span(6);
+    }
+    @include breakpoint-desktop-small {
+        width: 554px;
+    }
+    &:before{
+        position: absolute;
+        content: '';
+        max-width: 494.16px;
+        width: 69vw;
+        aspect-ratio: 1 / 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../images/shape-circle.svg') no-repeat center;
+        z-index: 1;
+        @include breakpoint-tablet{
+            width: 39vw;
+        }
+        @include breakpoint-desktop-small{
+            width: 50vw;
+        }
+    }
+}
+
+
+// cta
+.cta{
+    background-color: #B2DC862E;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    @include breakpoint-desktop-small{
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+}
+.cta-text{
+    align-self: center;
+    @include grid-column-start(1);
+    @include grid-column-span(4); 
+    @include breakpoint-tablet{
+        h3{
+            font-size: 30px;
+        }
+        @include grid-column-start(3);
+        @include grid-column-span(4);
+    }
+}
+
+.cta-image{
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    @include grid-column-start(1);
+    @include grid-column-span(4); 
+    @include breakpoint-tablet{
+        @include grid-column-start(8);
+        @include grid-column-span(4);
+    }
+    @include breakpoint-desktop-small {
+        // width: 554px;
+    }
+    &:before{
+        position: absolute;
+        content: '';
+        max-width: 317.65px;
+        width: 69vw;
+        aspect-ratio: 1 / 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../images/shape-circle.svg') no-repeat center;
+        z-index: 1;
+        @include breakpoint-tablet{
+            width: 26vw;
+        }
+        @include breakpoint-desktop-small{
+            width: 50vw;
+        }
+    }
+}
+// text-image
+.hero ~  .text-image {
+    margin-top: 150px;
+}
+.text-image-image{
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    @include grid-column-start(1);
+    @include grid-column-span(4); 
+    @include breakpoint-tablet{
+        @include grid-column-start(1);
+        @include grid-column-span(5);
+    }
+    @include breakpoint-desktop-small {
+        width: 554px;
+    }
+    &:before{
+        position: absolute;
+        content: '';
+        max-width: 494.16px;
+        width: 69vw;
+        aspect-ratio: 1 / 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../images/shape-circle.svg') no-repeat center;
+        z-index: 1;
+        @include breakpoint-tablet{
+            width: 39vw;
+        }
+        @include breakpoint-desktop-small{
+            width: 50vw;
+        }
+    }
+}
+.text-image-text{
+    align-self: center;
+    @include grid-column-start(1);
+        @include grid-column-span(4);
+    @include breakpoint-tablet{
+        @include grid-column-start(7);
+        @include grid-column-span(6);
+    }
+  
+}
+
+.overview{
+    min-height: 800px;
+    background: linear-gradient(135deg, $color-green, $color-blue);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    @include breakpoint-desktop-small{
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+    .wrapper{
+        display: block;
+    > h2{
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 160px;
+        }
+    }
+}
+.overview-items{
+    @include grid-layout(4, 16px, 150px);
+    @include breakpoint-tablet{
+        @include grid-layout(12, 16px, 200px);
+    }
+}
+
+.overview-item{
+    background-color: $color-white;
+    padding:60px;
+    text-align: center;
+    border-radius: 50px;
+    @include grid-column-span(4);
+    @include breakpoint-tablet{
+        @include grid-column-span(6);
+    }
+    .overview-item-image{
+        margin-top: -150px;
+        margin-bottom: 60px;
+        justify-self: center;
+        width: 263.17px; 
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+     }
+}
