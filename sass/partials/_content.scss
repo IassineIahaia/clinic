@@ -74,12 +74,22 @@
 
 // cta
 .cta{
+    position: relative;
     background-color: #B2DC862E;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
     @include breakpoint-desktop-small{
         border-top-left-radius: 100px;
         border-top-right-radius: 100px;
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        background-color: #B2DC862E;
     }
 }
 .cta-text{

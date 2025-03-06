@@ -1,154 +1,50 @@
 footer{
     position: relative;
-    background: $color-black;
-    overflow: hidden;
-    padding: rem(100px) 0;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    background: linear-gradient(103deg, $color-green, $color-blue);
+    @include breakpoint-desktop-small{
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+    }
+    padding: rem(30px) 0;
     @include breakpoint-tablet{
-        padding: rem(150px) 0;
+        padding: rem(64px) 0;
     }
     @include breakpoint-desktop-small{
-        padding: rem(200px) 0;
+        padding: rem(120px) 0;
     }
 
-    .shape-top{
-        position: absolute;
-        top: 0;
-        left: 20px;
-        z-index: 2;
-        width: 140px;
-        @include breakpoint-tablet {
-            left: 138px;
-            width: 262px;
-        }
-    }
-
-    .shape-bottom{
-        position: absolute;
-        bottom: 0;
-        right: 20px;
-        z-index: 2;
-        width: 140px;
-        @include breakpoint-tablet {
-            right: 138px;
-            width: 262px;
-        }
-    }
-    .footer-title{
-        position: absolute;
-        right: -100px;
-        @include breakpoint-tablet {
-            right: -160px;
-        }
-        h2{
-            font-size: clamp(3.125rem, 0.3255rem + 10.4167vw, 9.375rem);
-        }
-    }
-
-    h1,h2, h3, h4, p, a{
-        color: $color-black;
-    }
     .wrapper{
-        margin-top: 110px;
-        @include breakpoint-tablet {
-            margin-top: 210px;
-            
-        }
         div{
-            @include grid-column-span(10);
+            @include grid-column-span(4);
             @include breakpoint-tablet{
-                @include grid-column-span(6);
-            }
-            @include breakpoint-desktop-small {
-                @include grid-column-span(4);
+                @include grid-column-span(3);
+                &:nth-child(1){
+                    @include grid-column-start(2);
+                }
+                &:nth-child(2){
+                    @include grid-column-start(6);
+                }
+                &:nth-child(3){
+                    @include grid-column-start(9);
+                }
             }
             li{
                 padding-left: 0!important;
             }
         }
-        h3{
-            font-size: rem(40px);
-            margin-bottom: 22px;
-            line-height: 1;
+        h2, h3, h4, p, a{
+            color: $color-white;
+            margin: 0;
         }
-        p, a{
-            font-size: rem(20px);
-            text-decoration: none
-        }
-        a{
-            position: relative;
-            &::after{
-                content: '';
-                position: absolute;
-                bottom: -4px;
-                left: 0;
-                width: 0;
-                height: 1px;
-                background: $color-black;
-                transition: width 0.4s ease-in-out;
-            }
-            &:hover{
-                &::after{
-                    width: 100%;
-                }
-            }
-        }
-
-        .footer-image{
-            height: 208px;
-            @include grid-column-start(2);
-            display: none;
-            @include breakpoint-tablet {
-                display: block;
-                @include grid-column-start(3);
-            }
-            @include breakpoint-desktop-small {
-                @include grid-column-start(4);
-            }
-            .shape-bottom, .shape-top{
-                path{
-                    fill:#000;
-                }
-            }
-            .shape-top{
-                position: absolute;
-                top: 0;
-                left: 15px;
-                z-index: 2;
-                width: 96px;
-                @include breakpoint-tablet {
-                    left: 20px;
-                    width: 118px;
-                }
-            }
-            .shape-bottom{
-                position: absolute;
-                bottom: -1px;
-                right: 15px;
-                z-index: 2;
-                width: 96px;
-                @include breakpoint-tablet {
-                    right: 20px;
-                    width: 118px;
-                }
-            }
-        }
-        .contact-info{
-            @include grid-column-start(2);
-            @include breakpoint-tablet {
-                @include grid-column-start(11);
-            }
-            @include breakpoint-desktop-small {
-                @include grid-column-start(10);
-            }
-        }
-        .link{
-            @include grid-column-start(2);
-            @include breakpoint-tablet {
-                @include grid-column-start(3);
-            }
-            @include breakpoint-desktop-small {
-                @include grid-column-start(16);
-            }
-        }
+    }
+}
+.footer-copyright{
+    background-color: $color-white;
+    padding: 30px 0;
+    text-align: center;
+    p{
+        margin: 0;
     }
 }
