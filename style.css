@@ -182,8 +182,8 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px 10px;
-  gap: 10px 10px;
+  grid-gap: 42px 16px;
+  gap: 42px 16px;
 }
 @media (min-width: 48rem) {
   .wrapper {
@@ -662,16 +662,21 @@ header.fixed {
   display: block;
 }
 .overview .wrapper > h2 {
-  font-size: 50px;
   text-align: center;
-  margin-bottom: 160px;
+  margin-bottom: 184px;
+}
+@media (min-width: 48rem) {
+  .overview .wrapper > h2 {
+    font-size: 50px;
+    margin-bottom: 234px;
+  }
 }
 
 .overview-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 150px 16px;
-  gap: 150px 16px;
+  grid-gap: 235px 16px;
+  gap: 235px 16px;
 }
 @media (min-width: 48rem) {
   .overview-items {
@@ -684,7 +689,7 @@ header.fixed {
 
 .overview-item {
   background-color: #fff;
-  padding: 60px;
+  padding-bottom: 60px;
   text-align: center;
   border-radius: 50px;
   grid-column-end: span 4;
@@ -903,26 +908,6 @@ header.fixed {
 
 footer {
   position: relative;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
-  background: linear-gradient(103deg, #B2DC86, #72CDEC);
-  padding: 1.875rem 0;
-}
-@media (min-width: 60rem) {
-  footer {
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-  }
-}
-@media (min-width: 48rem) {
-  footer {
-    padding: 4rem 0;
-  }
-}
-@media (min-width: 60rem) {
-  footer {
-    padding: 7.5rem 0;
-  }
 }
 footer .wrapper div {
   grid-column-end: span 4;
@@ -944,9 +929,28 @@ footer .wrapper div {
 footer .wrapper div li {
   padding-left: 0 !important;
 }
+footer .wrapper div li a:hover {
+  color: rgb(104, 104, 104);
+}
 footer .wrapper h2, footer .wrapper h3, footer .wrapper h4, footer .wrapper p, footer .wrapper a {
-  color: #fff;
+  color: #000;
   margin: 0;
+}
+footer .wrapper h2, footer .wrapper h3, footer .wrapper h4 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.footer-content {
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  background: linear-gradient(103deg, #B2DC86, #72CDEC);
+}
+@media (min-width: 60rem) {
+  .footer-content {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
 }
 
 .footer-copyright {

@@ -1,20 +1,5 @@
 footer{
     position: relative;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-    background: linear-gradient(103deg, $color-green, $color-blue);
-    @include breakpoint-desktop-small{
-        border-top-left-radius: 100px;
-        border-top-right-radius: 100px;
-    }
-    padding: rem(30px) 0;
-    @include breakpoint-tablet{
-        padding: rem(64px) 0;
-    }
-    @include breakpoint-desktop-small{
-        padding: rem(120px) 0;
-    }
-
     .wrapper{
         div{
             @include grid-column-span(4);
@@ -32,12 +17,30 @@ footer{
             }
             li{
                 padding-left: 0!important;
+                a{
+                    &:hover{
+                        color: rgb(104, 104, 104);
+                    }
+                }
             }
         }
         h2, h3, h4, p, a{
-            color: $color-white;
+            color: $color-black;
             margin: 0;
         }
+        h2, h3, h4{
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+    }
+}
+.footer-content{
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    background: linear-gradient(103deg, $color-green, $color-blue);
+    @include breakpoint-desktop-small{
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
     }
 }
 .footer-copyright{

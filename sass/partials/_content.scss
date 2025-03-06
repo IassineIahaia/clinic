@@ -198,14 +198,17 @@
     .wrapper{
         display: block;
     > h2{
-            font-size: 50px;
             text-align: center;
-            margin-bottom: 160px;
+            margin-bottom: 184px;
+            @include breakpoint-tablet{
+                font-size: 50px;
+                margin-bottom: 234px;
+            }
         }
     }
 }
 .overview-items{
-    @include grid-layout(4, 16px, 150px);
+    @include grid-layout(4, 16px, 235px);
     @include breakpoint-tablet{
         @include grid-layout(12, 16px, 200px);
     }
@@ -213,7 +216,7 @@
 
 .overview-item{
     background-color: $color-white;
-    padding:60px;
+    padding-bottom:60px;
     text-align: center;
     border-radius: 50px;
     @include grid-column-span(4);
