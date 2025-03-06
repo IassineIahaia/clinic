@@ -241,6 +241,7 @@ h2 {
 
 h3 {
   font-size: 1.875rem;
+  margin-bottom: 20px;
 }
 @media (min-width: 60rem) {
   h3 {
@@ -266,7 +267,7 @@ em {
 }
 
 p {
-  margin-bottom: 1.875rem;
+  margin-bottom: 2.1875rem;
   line-height: 24px;
 }
 
@@ -339,17 +340,18 @@ p {
 }
 @media (min-width: 48rem) {
   .text-container p:has(img) {
-    margin: 50px 0;
+    margin: 77px 0;
   }
 }
 .text-container p:has(img) > img {
   object-fit: cover;
   width: 100%;
-  height: 372px;
+  height: 250px;
   border-radius: 30px;
 }
 @media (min-width: 48rem) {
   .text-container p:has(img) > img {
+    height: 372px;
     border-radius: 66px;
   }
 }
@@ -440,9 +442,24 @@ header.fixed {
     border-bottom-right-radius: 100px;
   }
 }
+.hero .wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0 16px;
+  gap: 0 16px;
+}
+@media (min-width: 60rem) {
+  .hero .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 16px 16px;
+    gap: 16px 16px;
+  }
+}
 
 .hero-text {
   align-self: end;
+  margin-bottom: 40px;
   grid-column-end: span 4;
 }
 @media (min-width: 48rem) {
@@ -519,6 +536,10 @@ header.fixed {
   }
 }
 
+.hero ~ .body-text {
+  margin-top: 130px;
+}
+
 .cta {
   position: relative;
   background-color: rgba(178, 220, 134, 0.1803921569);
@@ -542,7 +563,6 @@ header.fixed {
 }
 
 .cta-text {
-  align-self: center;
   grid-column-start: 1;
   grid-column-end: span 4;
 }
@@ -550,13 +570,16 @@ header.fixed {
   .cta-text {
     grid-column-start: 3;
     grid-column-end: span 4;
+    margin: 90px 0;
   }
   .cta-text h3 {
     font-size: 30px;
+    margin-bottom: 20px;
   }
 }
 
 .cta-image {
+  align-self: center;
   position: relative;
   overflow: hidden;
   aspect-ratio: 1/1;
@@ -614,7 +637,7 @@ header.fixed {
 .text-image-image:before {
   position: absolute;
   content: "";
-  max-width: 494.16px;
+  max-width: 419px;
   width: 69vw;
   aspect-ratio: 1/1;
   top: 50%;
@@ -625,12 +648,12 @@ header.fixed {
 }
 @media (min-width: 48rem) {
   .text-image-image:before {
-    width: 39vw;
+    width: 30vw;
   }
 }
 @media (min-width: 60rem) {
   .text-image-image:before {
-    width: 30vw;
+    width: 25vw;
   }
 }
 
@@ -645,15 +668,19 @@ header.fixed {
     grid-column-end: span 6;
   }
 }
+.text-image-text p {
+  margin-bottom: 40px;
+}
 
 .overview {
-  margin-top: 30px;
+  margin-top: 60px;
   min-height: 800px;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
 }
 @media (min-width: 60rem) {
   .overview {
+    margin-top: 30px;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
   }
@@ -699,6 +726,9 @@ header.fixed {
     grid-column-end: span 6;
   }
 }
+.overview-item .overview-item-text h3 {
+  margin-bottom: 55px;
+}
 .overview-item .overview-item-text .btn {
   background-color: #fff;
   padding: 0.8125rem 3.625rem 0.9375rem 3.75rem;
@@ -708,7 +738,7 @@ header.fixed {
 }
 .overview-item .overview-item-image {
   margin-top: -150px;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
   justify-self: center;
   width: 300px;
   aspect-ratio: 1/1;
@@ -728,6 +758,7 @@ header.fixed {
 }
 
 .gradient-bg {
+  margin-top: 0px;
   background: linear-gradient(135deg, #B2DC86, #72CDEC);
 }
 .gradient-bg .overview-item {
@@ -780,12 +811,14 @@ header.fixed {
 }
 @media (min-width: 48rem) {
   .sidebar {
+    margin-top: 25px;
     grid-column-start: 9;
     grid-column-end: span 2;
   }
 }
 .sidebar h3 {
   font-size: 32px;
+  margin-bottom: 20px;
 }
 .sidebar p {
   margin: 0;

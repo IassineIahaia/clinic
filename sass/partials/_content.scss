@@ -9,9 +9,16 @@
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
     }
+    .wrapper{
+        @include grid-layout(4, 16px, 0);
+        @include breakpoint-desktop-small{
+            @include grid-layout(12, 16px);
+        }
+    }
 }
 .hero-text{
     align-self: end;
+    margin-bottom: 40px;
     @include grid-column-span(4); 
     @include breakpoint-tablet{
         @include grid-column-start(1);
@@ -26,7 +33,6 @@
             font-size: 50px;
         }
     }
- 
     p{
         max-width: 396px;
     }
@@ -73,7 +79,9 @@
         }
     }
 }
-
+.hero ~  .body-text{
+    margin-top: 130px;
+}
 
 // cta
 .cta{
@@ -96,19 +104,21 @@
     }
 }
 .cta-text{
-    align-self: center;
     @include grid-column-start(1);
     @include grid-column-span(4); 
     @include breakpoint-tablet{
         h3{
             font-size: 30px;
+            margin-bottom: 20px;
         }
         @include grid-column-start(3);
         @include grid-column-span(4);
+        margin: 90px 0;
     }
 }
 
 .cta-image{
+    align-self: center;
     position: relative;
     overflow: hidden;
     aspect-ratio: 1 / 1;
@@ -156,7 +166,7 @@
     &:before{
         position: absolute;
         content: '';
-        max-width: 494.16px;
+        max-width: 419px;
         width: 69vw;
         aspect-ratio: 1 / 1;
         top: 50%;
@@ -165,10 +175,10 @@
         background: url('../images/shape-circle.svg') no-repeat center;
         z-index: 1;
         @include breakpoint-tablet{
-            width: 39vw;
+            width: 30vw;
         }
         @include breakpoint-desktop-small{
-            width: 30vw;
+            width: 25vw;
         }
     }
 }
@@ -180,15 +190,18 @@
         @include grid-column-start(7);
         @include grid-column-span(6);
     }
-  
+  p{
+    margin-bottom: 40px;
+  }
 }
 
 .overview{
-    margin-top: 30px;
+    margin-top: 60px;
     min-height: 800px;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
     @include breakpoint-desktop-small{
+        margin-top: 30px;
         border-top-left-radius: 100px;
         border-top-right-radius: 100px;
     }
@@ -221,6 +234,9 @@
         @include grid-column-span(6);
     }
     .overview-item-text{
+        h3{
+            margin-bottom: 55px;
+        }
         .btn{
             background-color: $color-white;
             padding: rem(13px) rem(58px) rem(15px) rem(60px);
@@ -231,7 +247,7 @@
     }
     .overview-item-image{
         margin-top: -150px;
-        margin-bottom: 60px;
+        margin-bottom: 55px;
         justify-self: center;
         width: 300px; 
         aspect-ratio: 1 / 1;
@@ -252,6 +268,7 @@
 }
 
 .gradient-bg{
+    margin-top: 0px;
     background: linear-gradient(135deg, $color-green, $color-blue);
     .overview-item{
         background: $color-white;
@@ -298,11 +315,13 @@
     @include grid-column-start(1);
     @include grid-column-span(2);
     @include breakpoint-tablet{
+        margin-top: 25px;
         @include grid-column-start(9);
         @include grid-column-span(2);
     }
     h3{
         font-size: 32px;
+        margin-bottom: 20px;
     }
     p{
         margin: 0;
