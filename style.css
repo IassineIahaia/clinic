@@ -190,8 +190,8 @@ body {
     width: calc(100% - 6rem);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 10px 10px;
-    gap: 10px 10px;
+    grid-gap: 16px 16px;
+    gap: 16px 16px;
   }
 }
 
@@ -459,6 +459,11 @@ header.fixed {
 .hero-text h1 {
   font-size: 38px;
 }
+@media (min-width: 48rem) {
+  .hero-text h1 {
+    font-size: 50px;
+  }
+}
 .hero-text p {
   max-width: 396px;
 }
@@ -606,11 +611,6 @@ header.fixed {
     grid-column-end: span 5;
   }
 }
-@media (min-width: 60rem) {
-  .text-image-image {
-    width: 554px;
-  }
-}
 .text-image-image:before {
   position: absolute;
   content: "";
@@ -630,7 +630,7 @@ header.fixed {
 }
 @media (min-width: 60rem) {
   .text-image-image:before {
-    width: 50vw;
+    width: 30vw;
   }
 }
 
@@ -701,6 +701,7 @@ header.fixed {
 }
 .overview-item .overview-item-text .btn {
   background-color: #fff;
+  padding: 0.8125rem 3.625rem 0.9375rem 3.75rem;
 }
 .overview-item .overview-item-text .btn:hover {
   background-color: #72CDEC;
@@ -709,7 +710,7 @@ header.fixed {
   margin-top: -150px;
   margin-bottom: 60px;
   justify-self: center;
-  width: 263.17px;
+  width: 300px;
   aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
@@ -717,8 +718,7 @@ header.fixed {
 .overview-item .overview-item-image:before {
   position: absolute;
   content: "";
-  max-width: 317.65px;
-  width: 230px;
+  width: 261.8px;
   aspect-ratio: 1/1;
   top: 50%;
   left: 50%;
@@ -783,6 +783,9 @@ header.fixed {
     grid-column-start: 9;
     grid-column-end: span 2;
   }
+}
+.sidebar h3 {
+  font-size: 32px;
 }
 .sidebar p {
   margin: 0;
@@ -972,7 +975,12 @@ footer .wrapper div {
     grid-column-start: 6;
   }
   footer .wrapper div:nth-child(3) {
-    grid-column-start: 9;
+    grid-column-start: 10;
+  }
+}
+@media (min-width: 60rem) {
+  footer .wrapper div:nth-child(2) {
+    margin-left: 47px;
   }
 }
 footer .wrapper div li {
@@ -1005,9 +1013,10 @@ footer .wrapper h2, footer .wrapper h3, footer .wrapper h4 {
 .footer-copyright {
   background-color: #fff;
   padding: 30px 0;
-  text-align: center;
 }
 .footer-copyright p {
+  grid-column-start: 5;
+  grid-column-end: span 4;
   margin: 0;
 }
 

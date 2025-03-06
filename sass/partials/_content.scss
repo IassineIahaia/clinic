@@ -22,6 +22,9 @@
     }
     h1{
         font-size: 38px;
+        @include breakpoint-tablet{
+            font-size: 50px;
+        }
     }
  
     p{
@@ -150,9 +153,6 @@
         @include grid-column-start(1);
         @include grid-column-span(5);
     }
-    @include breakpoint-desktop-small {
-        width: 554px;
-    }
     &:before{
         position: absolute;
         content: '';
@@ -168,7 +168,7 @@
             width: 39vw;
         }
         @include breakpoint-desktop-small{
-            width: 50vw;
+            width: 30vw;
         }
     }
 }
@@ -223,6 +223,7 @@
     .overview-item-text{
         .btn{
             background-color: $color-white;
+            padding: rem(13px) rem(58px) rem(15px) rem(60px);
             &:hover{
                 background-color: $color-blue; 
              }
@@ -232,15 +233,14 @@
         margin-top: -150px;
         margin-bottom: 60px;
         justify-self: center;
-        width: 263.17px; 
+        width: 300px; 
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         overflow: hidden;
         &:before{
             position: absolute;
             content: '';
-            max-width: 317.65px;
-            width: 230px;
+            width: 261.8px;
             aspect-ratio: 1 / 1;
             top: 50%;
             left: 50%;
@@ -300,6 +300,9 @@
     @include breakpoint-tablet{
         @include grid-column-start(9);
         @include grid-column-span(2);
+    }
+    h3{
+        font-size: 32px;
     }
     p{
         margin: 0;
